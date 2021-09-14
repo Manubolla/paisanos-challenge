@@ -1,16 +1,30 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	font-size: 100%;
+}
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+	padding: 0;
+	margin: 0;
+	background:#fff;
+	width: 100vw;
+	height: 100vh;
 
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+		Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+	font-family: 'simpsons';
+	src: url('../public/fonts/Simpsonfont.otf');
+}
+@font-face {
+	font-family: 'PatrickHand';
+	src: url('../public/fonts/PatrickHand-Regular.ttf');
 }
