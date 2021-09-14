@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const Home: NextPage = () => {
-	const [size, setSize] = useState({ width: 450, height: 600 });
+	const [size, setSize] = useState({ width: window.screen.width, height: window.screen.height });
 	const [hero, setHero] = useState(heroPhoto);
 
 	useEffect(() => {
@@ -16,6 +16,7 @@ const Home: NextPage = () => {
 		} else {
 			setHero(heroMobile);
 		}
+
 		const handleResize = () => {
 			setSize({ width: window.innerWidth, height: window.innerHeight });
 
