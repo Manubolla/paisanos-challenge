@@ -9,12 +9,3 @@
     position: relative;
     margin-top: 1em;
 }
-.containerLoading {
-	height: 84vh;
-	width: 100vw;
-	position: relative;
-	overflow: hidden;
-	align-items: center;
-	justify-content: center;
-	text-align: -webkit-center;
-}

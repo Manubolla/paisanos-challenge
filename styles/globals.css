@@ -19,6 +19,19 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+.containerLoading {
+	height: 84vh;
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+	text-align: -webkit-center;
+	padding: 5em;
+}
+.loading {
+	border-radius: 5em;
+}
 
 @font-face {
 	font-family: 'simpsons';

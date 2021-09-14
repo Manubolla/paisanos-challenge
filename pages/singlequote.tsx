@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import QuoteCard from '../components/QuoteCard';
 import QuoteService from '../services/QuoteService';
 import { QuoteResponse } from '../types/DTOs/QuoteServiceDTO';
-import styles from '../styles/Quotes.module.css'
+import styles from '../styles/Quotes.module.css';
+import Loader from '../components/Loader';
 
 const SingleQuote: NextPage = () => {
 	const [quotes, setQuotes] = useState<QuoteResponse[] | undefined>();
@@ -17,11 +18,13 @@ const SingleQuote: NextPage = () => {
 	}, []);
 
 	//Spinner loading
-	if (!quotes) return <div className={styles.containerLoading}>Loading..</div>;
+	if (!quotes) return <Loader />;
 
 	return (
 		<div className={styles.container}>
-			<button style={{ position: 'absolute', top: 0 }} onClick={fetchData}>GET RANDOM QUOTE</button>
+			<button style={{ position: 'absolute', top: 0 }} onClick={fetchData}>
+				GET RANDOM QUOTE
+			</button>
 			{quotes && quotes.map((item) => <QuoteCard data={item} key={Math.random()} />)}
 		</div>
 	);

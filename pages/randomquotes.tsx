@@ -4,6 +4,7 @@ import QuoteCard from '../components/QuoteCard';
 import QuoteService from '../services/QuoteService';
 import { QuoteResponse } from '../types/DTOs/QuoteServiceDTO';
 import styles from '../styles/RandomQuotes.module.css';
+import Loader from '../components/Loader';
 
 const RandomQuotes: NextPage = () => {
 	const [quotes, setQuotes] = useState<QuoteResponse[] | undefined>();
@@ -43,7 +44,7 @@ const RandomQuotes: NextPage = () => {
 			</div>
 		);
 	//Spinner loading
-	if (!quotes) return <div className={styles.containerLoading}>Loading..</div>;
+	if (!quotes) return <Loader />;
 
 	return (
 		<div className={styles.container}>

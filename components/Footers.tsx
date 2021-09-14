@@ -1,17 +1,11 @@
-import styles from '../styles/Nav.module.css';
-import Link from 'next/link';
+import styles from '../styles/Footer.module.css';
 
 const Footer = () => {
 	return (
-		<nav className={styles.nav}>
+		<nav className={styles.footer}>
 			<ul>
-				<li>
-					<Link href='/'>Home</Link>
-				</li>
-
-				<li>
-					<Link href='/favorites'>Favorites</Link>
-				</li>
+				<li>Paisanos challenge</li>
+				<li> {`© 2021 Manuel Bolla Agrelo - All rights reserved.`}</li>
 			</ul>
 		</nav>
 	);
